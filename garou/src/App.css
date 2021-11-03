@@ -1,5 +1,13 @@
-.App {
+@import './Fonts.css';
 
+.App {
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+.app-title {
+  margin: auto auto auto 50px;
+  font-size: 48px;
+  color: var(--yellow);
 }
 
 .App-logo {
@@ -13,7 +21,7 @@
 }
 
 .App-header {
-  background-color: #282c34;
+  background-color: var(--gray);
   height: 17vh;
   display: flex;
 }
@@ -30,22 +38,47 @@
 .options-selector {
   width: auto;
   margin: 5px auto;
-  /* text-align: center; */
+  align-items: center;
+  justify-content: center;
   display: flex;
   flex-direction: column;
   flex-wrap: wrap;
-  height: 175px;
+  height: 100px;
+  font-weight: 600;
 }
 
 .character-count {
   display: flex;
   justify-content: space-between;
   margin: 10px;
-  width: 175px;
+  width: 185px;
+  align-items: flex-end;
 }
 
 .character-count label {
-  font-size: 18px;
+  font-size: 15px;
+}
+
+.launch-button {
+  margin: 10px 40vw 50px 40vw;
+  height: 35px;
+  width: 20vw;
+  padding: 5px;
+  font-size: 20px;
+  font-weight: 700;
+  border: none;
+  border-radius: 15px;
+  color: var(--yellow);
+  background-color: var(--gray);
+}
+
+.launch-button:hover {
+  width: 21vw;
+  height: 37px;
+  margin: 10px 39.5vw 50px 39.5vw;
+  font-weight: 800;
+  font-size: 21px;
+
 }
 
 .number-input {

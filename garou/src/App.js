@@ -62,6 +62,7 @@ function App() {
     <div className="App">
       <header className="App-header">
         <img src={logo} className="App-logo" alt="logo" />
+        <h1 className="app-title">Loup Garou, but make it React</h1>
       </header>
 
       <form onSubmit={generate}>
@@ -115,7 +116,9 @@ function App() {
             <input type="checkbox" onChange={(e) => setFille(!fille)}></input>
           </div>
         </div>
-        <button type="submit">LET'S GO !</button>
+        <button className="launch-button" type="submit">
+          LET'S GO !
+        </button>
       </form>
       <div className="cards-container">{roster}</div>
     </div>
