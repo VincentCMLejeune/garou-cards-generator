@@ -52,8 +52,8 @@ function App() {
     }
 
     setRoster(
-      rooster.map((x) => {
-        return <Carte type={x} />;
+      rooster.map((x, i) => {
+        return <Carte type={x} key={i} />;
       })
     );
   };
