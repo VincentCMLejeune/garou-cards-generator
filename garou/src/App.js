@@ -8,23 +8,20 @@ import React, { useState } from "react";
 function App() {
   const [villagers, setVillagers] = React.useState();
   const [garous, setGarous] = React.useState();
-  const [voyantes, setVoyantes] = React.useState();
+  const [voyante, setVoyante] = React.useState(false);
   const [roster, setRoster] = React.useState("");
 
   let rooster = [];
 
   const generate = (e) => {
     e.preventDefault();
-    console.log(villagers);
-    console.log(garous);
-    console.log(voyantes);
     for (let i = 0; i < Number(villagers); i++) {
       rooster.push("villageois");
     }
     for (let i = 0; i < Number(garous); i++) {
       rooster.push("garou");
     }
-    for (let i = 0; i < Number(voyantes); i++) {
+    if (voyante) {
       rooster.push("voyante");
     }
 
@@ -51,27 +48,31 @@ function App() {
         <img src={logo} className="App-logo" alt="logo" />
       </header>
 
-      <form className="options-selector" onSubmit={generate}>
-        <div className="character-count">
-          <label htmlFor="villagers">Villaegois</label>
-          <input
-            type="number"
-            onChange={(e) => setVillagers(e.target.value)}
-          ></input>
-        </div>
-        <div className="character-count">
-          <label htmlFor="garou">Loup-garous</label>
-          <input
-            type="number"
-            onChange={(e) => setGarous(e.target.value)}
-          ></input>
-        </div>
-        <div className="character-count">
-          <label htmlFor="voyante">Voyante</label>
-          <input
-            type="number"
-            onChange={(e) => setVoyantes(e.target.value)}
-          ></input>
+      <form onSubmit={generate}>
+        <div className="options-selector">
+          <div className="character-count">
+            <label htmlFor="villagers">Villaegois</label>
+            <input
+              className="number-input"
+              type="number"
+              onChange={(e) => setVillagers(e.target.value)}
+            ></input>
+          </div>
+          <div className="character-count">
+            <label htmlFor="garou">Loup-garous</label>
+            <input
+              className="number-input"
+              type="number"
+              onChange={(e) => setGarous(e.target.value)}
+            ></input>
+          </div>
+          <div className="character-count">
+            <label htmlFor="voyante">Voyante</label>
+            <input
+              type="checkbox"
+              onChange={(e) => setVoyante(!voyante)}
+            ></input>
+          </div>
         </div>
         <button type="submit">LET'S GO !</button>
       </form>
