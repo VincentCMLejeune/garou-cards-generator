@@ -6,10 +6,14 @@ import Carte from "./components/Carte";
 import React, { useState } from "react";
 
 function App() {
-  const [villagers, setVillagers] = React.useState();
-  const [garous, setGarous] = React.useState();
-  const [voyante, setVoyante] = React.useState(false);
-  const [roster, setRoster] = React.useState("");
+  const [villagers, setVillagers] = useState();
+  const [garous, setGarous] = useState();
+  const [voyante, setVoyante] = useState(false);
+  const [sorciere, setSorciere] = useState(false);
+  const [chasseur, setChasseur] = useState(false);
+  const [cupidon, setCupidon] = useState(false);
+  const [fille, setFille] = useState(false);
+  const [roster, setRoster] = useState("");
 
   let rooster = [];
 
@@ -23,6 +27,18 @@ function App() {
     }
     if (voyante) {
       rooster.push("voyante");
+    }
+    if (sorciere) {
+      rooster.push("sorciere");
+    }
+    if (chasseur) {
+      rooster.push("chasseur");
+    }
+    if (cupidon) {
+      rooster.push("cupidon");
+    }
+    if (fille) {
+      rooster.push("fille");
     }
 
     let currentIndex = rooster.length;
@@ -51,7 +67,7 @@ function App() {
       <form onSubmit={generate}>
         <div className="options-selector">
           <div className="character-count">
-            <label htmlFor="villagers">Villaegois</label>
+            <label htmlFor="villagers">Villageois</label>
             <input
               className="number-input"
               type="number"
@@ -72,6 +88,31 @@ function App() {
               type="checkbox"
               onChange={(e) => setVoyante(!voyante)}
             ></input>
+          </div>
+          <div className="character-count">
+            <label htmlFor="sorciere">Sorcière</label>
+            <input
+              type="checkbox"
+              onChange={(e) => setSorciere(!sorciere)}
+            ></input>
+          </div>
+          <div className="character-count">
+            <label htmlFor="chasseur">Chasseur</label>
+            <input
+              type="checkbox"
+              onChange={(e) => setChasseur(!chasseur)}
+            ></input>
+          </div>
+          <div className="character-count">
+            <label htmlFor="cupidon">Cupidon</label>
+            <input
+              type="checkbox"
+              onChange={(e) => setCupidon(!cupidon)}
+            ></input>
+          </div>
+          <div className="character-count">
+            <label htmlFor="fille">Petite fille</label>
+            <input type="checkbox" onChange={(e) => setFille(!fille)}></input>
           </div>
         </div>
         <button type="submit">LET'S GO !</button>
