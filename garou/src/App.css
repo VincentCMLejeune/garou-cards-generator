@@ -47,3 +47,10 @@
 .character-count label {
   font-size: 18px;
 }
+
+.cards-container {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  width: 100vw;
+}

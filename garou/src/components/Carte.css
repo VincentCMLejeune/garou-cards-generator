@@ -1,0 +1,20 @@
+.carte-img {
+    height: 200px;
+    width: 200px;
+}
+
+.carte {
+    display: flex;
+    flex-direction: column;
+    width: 200px;
+    margin: auto 2vw;
+}
+
+.title {
+    margin: 0;
+}
+
+.description {
+    font-size: small;
+    margin-top: 0;
+}
