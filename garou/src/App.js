@@ -1,9 +1,7 @@
 import logo from "./logo.svg";
 import "./App.css";
 
-import Garou from './components/Garou'
-import Villageois from "./components/Villageois";
-import Voyante from "./components/Voyante";
+import Carte from "./components/Carte";
 
 import React, { useState } from 'react'
 
@@ -22,19 +20,17 @@ function App() {
     console.log(garous)
     console.log(voyantes)
     for (let i = 0 ; i < Number(villagers) ; i++) {
-      rooster.push('Villageois')
+      rooster.push('villageois')
     }
     for (let i = 0 ; i < Number(garous) ; i++) {
-      rooster.push('Garou')
+      rooster.push('garou')
     }
     for (let i = 0 ; i < Number(voyantes) ; i++) {
-      rooster.push('Voyante')
+      rooster.push('voyante')
     }
 
     setRoster(rooster.map(x => {
-      if (x==='Villageois') return <Villageois />
-      else if (x==='Garou') return <Garou />
-      else if (x==='Voyante') return <Voyante />
+      return <Carte type={x} />
     }))
   }  
 
