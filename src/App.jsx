@@ -1,11 +1,14 @@
-import logo from "./logo.png";
-import "./App.css";
+import React, { useState } from 'react';
+import { Switch, Route } from 'react-router-dom';
 
 import Carte from "./components/Carte";
+import CharacterSelect from "./Screens/Character Selection/CharacterSelect";
 
-import React, { useState } from "react";
+import logo from "./logo.png";
 
-function App() {
+import "./App.css";
+
+export default function App() {
   const [villagers, setVillagers] = useState();
   const [garous, setGarous] = useState();
   const [voyante, setVoyante] = useState(false);
@@ -124,5 +127,3 @@ function App() {
     </div>
   );
 }
-
-export default App;
