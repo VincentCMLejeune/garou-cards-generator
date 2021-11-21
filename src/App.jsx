@@ -1,8 +1,11 @@
-import React, { useState } from 'react';
-import { Switch, Route } from 'react-router-dom';
+import React, { useState } from "react";
+import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
+
+import CharacterSelect from "./Screens/Character Selection/CharacterSelect";
+import Game from "./Screens/Game/Game";
+import MainMenu from "./Screens/Main menu/MainMenu";
 
 import Carte from "./components/Carte";
-import CharacterSelect from "./Screens/Character Selection/CharacterSelect";
 
 import logo from "./logo.png";
 
@@ -68,7 +71,15 @@ export default function App() {
         <h1 className="app-title">Loup Garou, but make it React</h1>
       </header>
 
-      <form onSubmit={generate}>
+      <Router>
+        <Routes>
+          <Route exact path="/" element={<MainMenu/>}/>
+          <Route exact path="/selection" element={<CharacterSelect/>}/>
+          <Route exact path="/play" element={<Game/>}/>
+        </Routes>
+      </Router>
+
+      {/* <form onSubmit={generate}>
         <div className="options-selector">
           <div className="character-count">
             <label htmlFor="villagers">Villageois</label>
@@ -123,7 +134,7 @@ export default function App() {
           LET'S GO !
         </button>
       </form>
-      <div className="cards-container">{roster}</div>
+      <div className="cards-container">{roster}</div> */}
     </div>
   );
 }
