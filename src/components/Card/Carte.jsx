@@ -1,4 +1,4 @@
-import Cachee from "../media/cachee.png";
+import Cachee from "../../media/cachee.png";
 
 import cardsData from "./CardData";
 

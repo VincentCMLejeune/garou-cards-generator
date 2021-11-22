@@ -1,0 +1,17 @@
+@import "../../Fonts.css";
+
+.header {
+    background-color: var(--gray);
+    height: 17vh;
+    display: flex;
+}
+
+.logo {
+    height: 15vh;
+}
+
+.title {
+    margin: auto auto auto 50px;
+    font-size: 48px;
+    color: var(--yellow);
+}

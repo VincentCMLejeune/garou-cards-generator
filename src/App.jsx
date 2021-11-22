@@ -7,7 +7,7 @@ import CharacterSelect from "./Screens/Character Selection/CharacterSelect";
 import Game from "./Screens/Game/Game";
 import MainMenu from "./Screens/Main menu/MainMenu";
 
-import logo from "./logo.png";
+import Header from "./components/Header/Header";
 
 import "./App.css";
 
@@ -23,10 +23,7 @@ export default function App() {
 
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <h1 className="app-title">Loup Garou, but make it React</h1>
-      </header>
+      <Header />
       <GarouContext.Provider
         value={{
           villagers: villagers,

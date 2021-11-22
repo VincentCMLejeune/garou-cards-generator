@@ -1,10 +1,10 @@
-import GarouImg from "../media/garou.png";
-import VillageoisImg from "../media/villageois.png";
-import VoyanteImg from "../media/voyante.png";
-import SorciereImg from "../media/sorciere.png";
-import ChasseurImg from "../media/chasseur.png";
-import CupidonImg from "../media/cupidon.png";
-import FilleImg from "../media/fille.png";
+import GarouImg from "../../media/garou.png";
+import VillageoisImg from "../../media/villageois.png";
+import VoyanteImg from "../../media/voyante.png";
+import SorciereImg from "../../media/sorciere.png";
+import ChasseurImg from "../../media/chasseur.png";
+import CupidonImg from "../../media/cupidon.png";
+import FilleImg from "../../media/fille.png";
 
 const cardsData = {
   villageois: {

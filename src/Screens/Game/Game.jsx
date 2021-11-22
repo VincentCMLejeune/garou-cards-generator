@@ -4,7 +4,7 @@ import generateRoster from "../../algorithm/GenerateRoster";
 
 import GarouContext from "../../contexts/GarouContext";
 
-import Carte from "../../components/Carte";
+import Carte from "../../components/Card/Carte";
 
 import styles from "./Game.module.css";
 
