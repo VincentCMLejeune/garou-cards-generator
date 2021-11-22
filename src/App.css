@@ -47,7 +47,7 @@
   margin: 10px 39.5vw 50px 39.5vw;
   font-weight: 800;
   font-size: 21px;
-
+  cursor: pointer;
 }
 
 .number-input {

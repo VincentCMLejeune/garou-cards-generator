@@ -8,7 +8,7 @@ export default function MainMenu() {
     <div className={styles.background}> </div>
       <h2>Bienvenue dans le Garou made in React !</h2>
       <Link to="/selection">
-        <div>Clique pour commencer</div>
+        <button className={styles.launchButton}>Commencer</button>
       </Link>
     </div>
   );
