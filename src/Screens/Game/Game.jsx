@@ -21,6 +21,9 @@ export default function Game() {
     fille,
   } = useContext(GarouContext);
 
+  const [day, setDay] = useState(true);
+  const [names, setNames] = useState();
+
   useEffect(() => {
     setRoster(
       generateRoster(
@@ -35,7 +38,19 @@ export default function Game() {
     );
   }, []);
 
-  const [day, setDay] = useState(true);
+  useEffect(() => {
+    if (roster) {
+      let arr = []
+      let count = 1
+      while (arr.length < roster.length) {
+        let temp = prompt(`Joueur ${count}, quel est ton nom ?`)
+        arr.push(temp)
+        count++
+      }
+      setNames(arr.reverse())
+    }
+  }, [roster])
+
 
   return (
     <div className={styles.container}>
@@ -57,7 +72,7 @@ export default function Game() {
         )}
       </div>
       <div className={styles.cardsContainer}>
-        {roster && roster.map((x, i) => <Carte type={x} key={i} name={'Carl'} />)}
+        {roster && roster.map((x, i) => <Carte type={x} key={i} name={names[i]} />)}
       </div>
     </div>
   );
