@@ -70,12 +70,12 @@
 
 .day .sun {
   animation: rises 4s ease-out;
-  top: 3vh;
+  top: 13vh;
 }
 
 .night .sun {
   animation: sets 4s ease-out;
-  top: 93vh;
+  top: 100vh;
 }
 
 .moon {
@@ -89,12 +89,12 @@
 
 .night .moon {
   animation: rises 4s ease-out;
-  top: 3vh;
+  top: 13vh;
 }
 
 .day .moon {
   animation: sets 4s ease-out;
-  top: 93vh;
+  top: 100vh;
 }
 
 .village {
@@ -108,7 +108,7 @@
 
 @keyframes rises {
   from {
-    transform: translate(0, 90vh);
+    transform: translate(0, 87vh);
   }
   to {
     transform: translate(0);
@@ -117,7 +117,7 @@
 
 @keyframes sets {
   from {
-    transform: translate(0, -90vh);
+    transform: translate(0, -87vh);
   }
   to {
     transform: translate(0);
