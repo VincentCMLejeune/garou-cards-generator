@@ -7,6 +7,7 @@ import CharacterSelect from "./Screens/Character Selection/CharacterSelect";
 import Game from "./Screens/Game/Game";
 import MainMenu from "./Screens/Main menu/MainMenu";
 
+import Footer from "./components/Footer/Footer";
 import Header from "./components/Header/Header";
 
 import "./App.css";
@@ -52,6 +53,7 @@ export default function App() {
           </Routes>
         </GarouContext.Provider>
       </Router>
+      <Footer />
     </div>
   );
 }
