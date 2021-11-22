@@ -21,10 +21,3 @@ Réinitialiser tout ou certaines cases
 Écran de jeu : rappel des personnages qui restent
 
 Écran final si tous garous morts ou si un seul garou avec villageois
-
-
-
-Dans le header, on peut relire les caracteristiques de chaque carte rapidement ?
-Resetting game
-Alert if name taken
-Rappel personnages presence
