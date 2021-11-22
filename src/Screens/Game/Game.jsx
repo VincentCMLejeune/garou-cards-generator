@@ -51,7 +51,6 @@ export default function Game() {
       <div className={styles.dayCycle}>
         {day && <div className={styles.day}></div>}
         {!day && <div className={styles.night}></div>}
-
       </div>
       <div className={styles.cardsContainer}>
         {roster && roster.map((x, i) => <Carte type={x} key={i} />)}
