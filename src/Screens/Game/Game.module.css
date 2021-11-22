@@ -1,9 +1,3 @@
-.container {
-    border: red;
-}
-
-
-
 .cardsContainer {
     display: flex;
     flex-wrap: wrap;

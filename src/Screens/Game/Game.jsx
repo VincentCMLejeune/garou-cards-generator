@@ -1,4 +1,4 @@
-import { useContext, useEffect, useState } from "react";
+import { useContext, useEffect } from "react";
 
 import GarouContext from "../../contexts/GarouContext";
 
@@ -58,19 +58,7 @@ export default function Game() {
 
   useEffect(() => {
     setRoster(generateRooster());
-  }, []);
-
-  // useEffect(() => {
-  //   let currentIndex = roster.length;
-  //   while (currentIndex !== 0) {
-  //     let randomIndex = Math.floor(Math.random() * currentIndex);
-  //     currentIndex--;
-  //     [roster[currentIndex], roster[randomIndex]] = [
-  //       roster[randomIndex],
-  //       roster[currentIndex],
-  //     ];
-  //   }
-  // }, [roster])
+  });
 
   return (
     <div className={styles.container}>

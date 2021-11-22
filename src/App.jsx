@@ -7,8 +7,6 @@ import CharacterSelect from "./Screens/Character Selection/CharacterSelect";
 import Game from "./Screens/Game/Game";
 import MainMenu from "./Screens/Main menu/MainMenu";
 
-import Carte from "./components/Carte";
-
 import logo from "./logo.png";
 
 import "./App.css";
@@ -22,49 +20,6 @@ export default function App() {
   const [cupidon, setCupidon] = useState(false);
   const [fille, setFille] = useState(false);
   const [roster, setRoster] = useState([]);
-
-  let rooster = [];
-
-  const generate = (e) => {
-    e.preventDefault();
-    for (let i = 0; i < Number(villagers); i++) {
-      rooster.push("villageois");
-    }
-    for (let i = 0; i < Number(garous); i++) {
-      rooster.push("garou");
-    }
-    if (voyante) {
-      rooster.push("voyante");
-    }
-    if (sorciere) {
-      rooster.push("sorciere");
-    }
-    if (chasseur) {
-      rooster.push("chasseur");
-    }
-    if (cupidon) {
-      rooster.push("cupidon");
-    }
-    if (fille) {
-      rooster.push("fille");
-    }
-
-    let currentIndex = rooster.length;
-    while (currentIndex !== 0) {
-      let randomIndex = Math.floor(Math.random() * currentIndex);
-      currentIndex--;
-      [rooster[currentIndex], rooster[randomIndex]] = [
-        rooster[randomIndex],
-        rooster[currentIndex],
-      ];
-    }
-
-    setRoster(
-      rooster.map((x, i) => {
-        return <Carte type={x} key={i} />;
-      })
-    );
-  };
 
   return (
     <div className="App">

@@ -10,7 +10,6 @@ export default function CharacterSelect() {
     chasseur,
     cupidon,
     fille,
-    roster,
     sorciere,
     voyante,
     setChasseur,
