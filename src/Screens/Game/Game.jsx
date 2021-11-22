@@ -12,6 +12,8 @@ export default function Game() {
   const {
     roster,
     setRoster,
+    names,
+    setNames,
     villagers,
     garous,
     voyante,
@@ -22,7 +24,6 @@ export default function Game() {
   } = useContext(GarouContext);
 
   const [day, setDay] = useState(true);
-  const [names, setNames] = useState();
 
   useEffect(() => {
     setRoster(

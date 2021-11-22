@@ -21,6 +21,7 @@ export default function App() {
   const [cupidon, setCupidon] = useState(false);
   const [fille, setFille] = useState(false);
   const [roster, setRoster] = useState([]);
+  const [names, setNames] = useState([]);
 
   return (
     <div className="App">
@@ -36,6 +37,7 @@ export default function App() {
             cupidon: cupidon,
             fille: fille,
             roster: roster,
+            names:names,
             setVillagers: setVillagers,
             setGarous: setGarous,
             setVoyante: setVoyante,
@@ -44,6 +46,7 @@ export default function App() {
             setCupidon: setCupidon,
             setFille: setFille,
             setRoster: setRoster,
+            setNames:setNames,
           }}
         >
           <Routes>
