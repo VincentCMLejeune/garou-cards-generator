@@ -6,7 +6,7 @@ Ce projet a été réalisé avec [Create React App](https://github.com/facebook/
 
 Vous pouvez lancer une partie, qui attribuera aléatoirement des cartes aux joueurs.
 Un cycle jour et nuit.
-Les cartes suivantes sont disponibles : Villageois, Loup-Garou, Voyante, Sorcière, Chasseur, Cupidon, Petit fille.
+Les cartes suivantes sont disponibles : Villageois, Loup-Garou, Voyante, Sorcière, Chasseur, Cupidon, Petite fille.
 
 ## Prochainement
 
