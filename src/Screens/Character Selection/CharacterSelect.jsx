@@ -24,8 +24,6 @@ export default function CharacterSelect() {
   return (
     <div className={styles.container}>
       <div className={styles.background}> </div>
-      <h2>Character Selection</h2>
-      <div>Choose your players</div>
       <div className="options-selector">
         <div className="character-count">
           <label htmlFor="villagers">Villageois</label>
