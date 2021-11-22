@@ -35,10 +35,20 @@ export default function Game() {
     );
   }, []);
 
+  const [day, setDay] = useState(true);
+
+  useEffect(() => {
+    if (day) {
+      console.log('Il fait jour')
+    }
+    else {
+      console.log('Il fait nuit')
+    }
+  }, [day])
+
   return (
     <div className={styles.container}>
-      <h2>Le village</h2>
-      <div>It's the game</div>
+      <button onClick={() => setDay(!day)}>Switch</button>
       <div className={styles.cardsContainer}>
         {roster && roster.map((x, i) => <Carte type={x} key={i} />)}
       </div>
