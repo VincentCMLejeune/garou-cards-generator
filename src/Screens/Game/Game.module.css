@@ -1,9 +1,12 @@
 @import "../../Fonts.css";
 
 .cardsContainer {
+  flex-direction: row-reverse;
   display: flex;
-  flex-wrap: wrap;
+  flex-wrap: wrap-reverse;
   margin-top: 100px;
+  justify-content: center;
+  align-items: center;
 }
 
 .dayButton {
@@ -18,6 +21,7 @@
   color: var(--yellow);
   background-color: var(--gray);
   vertical-align: middle;
+  font-family: var(--second-font-family);
 }
 
 .dayButton:hover {

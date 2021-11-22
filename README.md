@@ -27,4 +27,8 @@ Comment positionner les cartes ? Cercle ? En ligne en bas ? Déplacer les morts 
 
 Welcome page, selection page, game page
 
-https://codepen.io/vcohere/pen/NNLyeB?editors=1111
+Dans le header, on peut relire les caracteristiques de chaque carte rapidement ?
+
+Resetting game
+
+Alert if name taken
