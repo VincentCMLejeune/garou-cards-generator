@@ -1,3 +1,11 @@
 .container {
     border: red;
 }
+
+
+
+.cardsContainer {
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: 500px;
+}
