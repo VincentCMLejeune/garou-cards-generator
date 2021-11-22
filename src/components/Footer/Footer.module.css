@@ -1,0 +1,18 @@
+@import "../../Fonts.css";
+
+.footer {
+    background-color: var(--gray);
+    bottom: 0;
+    height: 20px;
+    position: fixed;
+    width: 100vw;
+    text-align: right;
+}
+
+.link{
+    color: var(--yellow);
+    font-family: var(--second-font-family);
+    font-weight: bold;
+    text-decoration: none;
+    margin-right: 20px;
+  }
