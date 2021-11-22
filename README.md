@@ -26,3 +26,5 @@ Comment positionner les cartes ? Cercle ? En ligne en bas ? Déplacer les morts 
 Écran final si tous garous morts ou si un seul garou avec villageois
 
 Welcome page, selection page, game page
+
+Dans le header, on peut relire les caracteristiques de chaque carte rapidement ?
