@@ -24,19 +24,20 @@ export default function Game() {
   } = useContext(GarouContext);
 
   const [day, setDay] = useState(true);
+  const [description, setDescription] = useState();
 
   useEffect(() => {
-    setRoster(
-      generateRoster(
-        villagers,
-        garous,
-        voyante,
-        chasseur,
-        sorciere,
-        cupidon,
-        fille
-      )
+    const [array, text] = generateRoster(
+      villagers,
+      garous,
+      voyante,
+      chasseur,
+      sorciere,
+      cupidon,
+      fille
     );
+    setRoster(array);
+    setDescription(text);
   }, []);
 
   useEffect(() => {
@@ -78,6 +79,10 @@ export default function Game() {
         {roster &&
           roster.map((x, i) => <Carte type={x} key={i} name={names[i]} />)}
       </div>
+      <ul className={styles.village}>
+        Le village contient :
+        {description && description.map((x, i) => <li key={i}>{x}</li>)}
+      </ul>
     </div>
   );
 }
