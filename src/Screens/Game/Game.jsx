@@ -57,7 +57,7 @@ export default function Game() {
         )}
       </div>
       <div className={styles.cardsContainer}>
-        {roster && roster.map((x, i) => <Carte type={x} key={i} />)}
+        {roster && roster.map((x, i) => <Carte type={x} key={i} name={'Carl'} />)}
       </div>
     </div>
   );

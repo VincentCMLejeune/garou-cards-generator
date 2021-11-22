@@ -19,6 +19,7 @@
     font-size: 20px;
     background-color: var(--timber);
     height: 25px;
+    margin: 0;
 }
 
 .title {
