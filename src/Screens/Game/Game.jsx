@@ -41,17 +41,19 @@ export default function Game() {
 
   useEffect(() => {
     if (roster) {
-      let arr = []
-      let count = 1
+      let arr = [];
+      let count = 1;
       while (arr.length < roster.length) {
-        let temp = prompt(`Joueur ${count}, quel est ton nom ?`)
-        arr.push(temp)
-        count++
+        let temp = prompt(`Joueur ${count}, quel est ton nom ?`);
+        while (arr.includes(temp)) {
+          temp = prompt(`Le nom "${temp}" est déjà pris.`);
+        }
+        arr.push(temp);
+        count++;
       }
-      setNames(arr.reverse())
+      setNames(arr.reverse());
     }
-  }, [roster])
-
+  }, [roster]);
 
   return (
     <div className={styles.container}>
@@ -73,7 +75,8 @@ export default function Game() {
         )}
       </div>
       <div className={styles.cardsContainer}>
-        {roster && roster.map((x, i) => <Carte type={x} key={i} name={names[i]} />)}
+        {roster &&
+          roster.map((x, i) => <Carte type={x} key={i} name={names[i]} />)}
       </div>
     </div>
   );
