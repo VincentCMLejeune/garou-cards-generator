@@ -39,16 +39,20 @@ export default function Game() {
 
   useEffect(() => {
     if (day) {
-      console.log('Il fait jour')
+      console.log("Il fait jour");
+    } else {
+      console.log("Il fait nuit");
     }
-    else {
-      console.log('Il fait nuit')
-    }
-  }, [day])
+  }, [day]);
 
   return (
     <div className={styles.container}>
       <button onClick={() => setDay(!day)}>Switch</button>
+      <div className={styles.dayCycle}>
+        {day && <div className={styles.day}></div>}
+        {!day && <div className={styles.night}></div>}
+
+      </div>
       <div className={styles.cardsContainer}>
         {roster && roster.map((x, i) => <Carte type={x} key={i} />)}
       </div>
