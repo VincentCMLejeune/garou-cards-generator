@@ -41,8 +41,18 @@ export default function Game() {
     <div className={styles.container}>
       <button onClick={() => setDay(!day)}>Switch</button>
       <div className={styles.dayCycle}>
-        {day && <div className={styles.day}></div>}
-        {!day && <div className={styles.night}></div>}
+        {day && (
+          <div className={styles.day}>
+            <div className={styles.sun}></div>
+            <div className={styles.moon}></div>
+          </div>
+        )}
+        {!day && (
+          <div className={styles.night}>
+            <div className={styles.sun}></div>
+            <div className={styles.moon}></div>
+          </div>
+        )}
       </div>
       <div className={styles.cardsContainer}>
         {roster && roster.map((x, i) => <Carte type={x} key={i} />)}
