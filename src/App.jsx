@@ -26,7 +26,6 @@ export default function App() {
   return (
     <div className="App">
       <Router>
-        <Header />
         <GarouContext.Provider
           value={{
             villagers: villagers,
@@ -37,7 +36,7 @@ export default function App() {
             cupidon: cupidon,
             fille: fille,
             roster: roster,
-            names:names,
+            names: names,
             setVillagers: setVillagers,
             setGarous: setGarous,
             setVoyante: setVoyante,
@@ -46,9 +45,10 @@ export default function App() {
             setCupidon: setCupidon,
             setFille: setFille,
             setRoster: setRoster,
-            setNames:setNames,
+            setNames: setNames,
           }}
         >
+          <Header />
           <Routes>
             <Route exact path="/" element={<MainMenu />} />
             <Route exact path="/selection" element={<CharacterSelect />} />
