@@ -30,7 +30,7 @@ export default function Carte({ type }) {
       <input className="player-name" type="text"></input>
       <img src={img} alt={title} className="carte-img" onClick={toggle} />
       <h2 className="title">{title}</h2>
-      <p className="description">{description}</p>
+      {/* <p className="description">{description}</p> */}
     </div>
   );
 }

@@ -2,12 +2,12 @@
 
 .header {
     background-color: var(--gray);
-    height: 17vh;
+    height: 12vh;
     display: flex;
 }
 
 .logo {
-    height: 15vh;
+    height: 12vh;
 }
 
 .title {

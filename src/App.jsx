@@ -23,35 +23,35 @@ export default function App() {
 
   return (
     <div className="App">
-      <Header />
-      <GarouContext.Provider
-        value={{
-          villagers: villagers,
-          garous: garous,
-          voyante: voyante,
-          sorciere: sorciere,
-          chasseur: chasseur,
-          cupidon: cupidon,
-          fille: fille,
-          roster: roster,
-          setVillagers: setVillagers,
-          setGarous: setGarous,
-          setVoyante: setVoyante,
-          setSorciere: setSorciere,
-          setChasseur: setChasseur,
-          setCupidon: setCupidon,
-          setFille: setFille,
-          setRoster: setRoster,
-        }}
-      >
-        <Router>
+      <Router>
+        <Header />
+        <GarouContext.Provider
+          value={{
+            villagers: villagers,
+            garous: garous,
+            voyante: voyante,
+            sorciere: sorciere,
+            chasseur: chasseur,
+            cupidon: cupidon,
+            fille: fille,
+            roster: roster,
+            setVillagers: setVillagers,
+            setGarous: setGarous,
+            setVoyante: setVoyante,
+            setSorciere: setSorciere,
+            setChasseur: setChasseur,
+            setCupidon: setCupidon,
+            setFille: setFille,
+            setRoster: setRoster,
+          }}
+        >
           <Routes>
             <Route exact path="/" element={<MainMenu />} />
             <Route exact path="/selection" element={<CharacterSelect />} />
             <Route exact path="/play" element={<Game />} />
           </Routes>
-        </Router>
-      </GarouContext.Provider>
+        </GarouContext.Provider>
+      </Router>
     </div>
   );
 }
