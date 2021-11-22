@@ -1,49 +1,14 @@
-import { useContext, useEffect } from "react";
+import { useContext, useEffect, useState } from "react";
+
+import generateRoster from "../../algorithm/GenerateRoster";
 
 import GarouContext from "../../contexts/GarouContext";
 
-import Carte from "../../components/Carte";
+import Carte from "../../components/Card/Carte";
 
 import styles from "./Game.module.css";
 
 export default function Game() {
-  const generateRooster = () => {
-    let arr = [];
-    for (let i = 0; i < Number(villagers); i++) {
-      arr.push("villageois");
-    }
-    for (let i = 0; i < Number(garous); i++) {
-      arr.push("garou");
-    }
-    if (voyante) {
-      arr.push("voyante");
-    }
-    if (sorciere) {
-      arr.push("sorciere");
-    }
-    if (chasseur) {
-      arr.push("chasseur");
-    }
-    if (cupidon) {
-      arr.push("cupidon");
-    }
-    if (fille) {
-      arr.push("fille");
-    }
-
-    let currentIndex = arr.length;
-    while (currentIndex !== 0) {
-      let randomIndex = Math.floor(Math.random() * currentIndex);
-      currentIndex--;
-      [arr[currentIndex], arr[randomIndex]] = [
-        arr[randomIndex],
-        arr[currentIndex],
-      ];
-    }
-
-    return arr;
-  };
-
   const {
     roster,
     setRoster,
@@ -57,13 +22,40 @@ export default function Game() {
   } = useContext(GarouContext);
 
   useEffect(() => {
-    setRoster(generateRooster());
-  });
+    setRoster(
+      generateRoster(
+        villagers,
+        garous,
+        voyante,
+        chasseur,
+        sorciere,
+        cupidon,
+        fille
+      )
+    );
+  }, []);
+
+  const [day, setDay] = useState(true);
 
   return (
     <div className={styles.container}>
-      <h2>Le village</h2>
-      <div>It's the game</div>
+      <button className={styles.dayButton} onClick={() => setDay(!day)}>
+        {day ? "Tomber la nuit" : "Se lever le jour"}
+      </button>
+      <div className={styles.dayCycle}>
+        {day && (
+          <div className={styles.day}>
+            <div className={styles.sun}></div>
+            <div className={styles.moon}></div>
+          </div>
+        )}
+        {!day && (
+          <div className={styles.night}>
+            <div className={styles.sun}></div>
+            <div className={styles.moon}></div>
+          </div>
+        )}
+      </div>
       <div className={styles.cardsContainer}>
         {roster && roster.map((x, i) => <Carte type={x} key={i} />)}
       </div>

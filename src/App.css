@@ -4,37 +4,6 @@
   font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
 
-.app-title {
-  margin: auto auto auto 50px;
-  font-size: 48px;
-  color: var(--yellow);
-}
-
-.App-logo {
-  height: 15vh;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: var(--gray);
-  height: 17vh;
-  display: flex;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
-}
-
 .options-selector {
   width: auto;
   margin: 5px auto;
@@ -78,7 +47,7 @@
   margin: 10px 39.5vw 50px 39.5vw;
   font-weight: 800;
   font-size: 21px;
-
+  cursor: pointer;
 }
 
 .number-input {

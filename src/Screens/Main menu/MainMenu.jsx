@@ -5,9 +5,10 @@ import styles from "./MainMenu.module.css";
 export default function MainMenu() {
   return (
     <div className={styles.container}>
-      <h2>Tutut fils de pute</h2>
+    <div className={styles.background}> </div>
+      <h2>Bienvenue dans le Garou made in React !</h2>
       <Link to="/selection">
-        <div>Clique pour commencer</div>
+        <button className={styles.launchButton}>Commencer</button>
       </Link>
     </div>
   );
