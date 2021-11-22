@@ -37,14 +37,6 @@ export default function Game() {
 
   const [day, setDay] = useState(true);
 
-  useEffect(() => {
-    if (day) {
-      console.log("Il fait jour");
-    } else {
-      console.log("Il fait nuit");
-    }
-  }, [day]);
-
   return (
     <div className={styles.container}>
       <button onClick={() => setDay(!day)}>Switch</button>
