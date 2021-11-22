@@ -39,7 +39,9 @@ export default function Game() {
 
   return (
     <div className={styles.container}>
-      <button onClick={() => setDay(!day)}>Switch</button>
+      <button className={styles.dayButton} onClick={() => setDay(!day)}>
+        {day ? "Tomber la nuit" : "Se lever le jour"}
+      </button>
       <div className={styles.dayCycle}>
         {day && (
           <div className={styles.day}>
