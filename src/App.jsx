@@ -22,6 +22,7 @@ export default function App() {
   const [fille, setFille] = useState(false);
   const [roster, setRoster] = useState([]);
   const [names, setNames] = useState([]);
+  const [showCharacters, setShowCharacters] = useState(false);
 
   return (
     <div className="App">
@@ -37,6 +38,7 @@ export default function App() {
             fille: fille,
             roster: roster,
             names: names,
+            showCharacters: showCharacters,
             setVillagers: setVillagers,
             setGarous: setGarous,
             setVoyante: setVoyante,
@@ -46,6 +48,7 @@ export default function App() {
             setFille: setFille,
             setRoster: setRoster,
             setNames: setNames,
+            setShowCharacters: setShowCharacters,
           }}
         >
           <Header />

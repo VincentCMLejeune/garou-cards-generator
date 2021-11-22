@@ -24,6 +24,6 @@ Réinitialiser tout ou certaines cases
 
 
 
-Dans le header, on peut relire les caracteristiques de chaque carte rapidement ?
-Resetting game
+
+
 Rappel personnages presence

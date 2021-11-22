@@ -16,3 +16,15 @@
     color: var(--yellow);
     font-family: var(--main-font-family);
 }
+
+.characters {
+    padding: 0 25px;
+    height: 12vh;
+    font-size: 24px;
+    font-family: var(--main-font-family);
+    color: var(--gray);
+    background-color: var(--yellow);
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+}

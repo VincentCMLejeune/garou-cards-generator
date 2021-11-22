@@ -58,7 +58,7 @@ export default function Game() {
   return (
     <div className={styles.container}>
       <button className={styles.dayButton} onClick={() => setDay(!day)}>
-        {day ? "Tomber la nuit" : "Se lever le jour"}
+        {day ? "Tomber la nuit" : "Lever le jour"}
       </button>
       <div className={styles.dayCycle}>
         {day && (
